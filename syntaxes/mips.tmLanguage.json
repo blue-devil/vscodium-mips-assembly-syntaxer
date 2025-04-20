@@ -1,0 +1,80 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "MIPS Assembly Syntaxer",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "comment.block.mips",
+          "begin": "/\\*",
+          "end": "\\*/"
+        },
+        {
+          "name": "support.function.mips",
+          "match": "\\b(abs|add|addi|addiu|addu|and|andi|b|bal|beq|beqz|bge|bgeu|bgez|bgezal|bgt|bgtu|bgtz|ble|bleu|blez|blt|bltu|bltz|bltzal|bne|bnez|break|div|divd|divdu|divu|j|jal|jalr|jr|la|lb|lbu|lc|ld|lh|lhu|li|lui|lw|lwl|lwr|mfc0|mfhi|mflo|move|mtc0|mthi|mtlo|mul|mulo|mulou|mult|multu|neg|negu|nop|nor|not|or|ori|rem|remu|rol|ror|rfe|sb|sd|seq|sge|sgeu|sgt|sgtu|sh|sle|sleu|sll|sllv|slt|slti|sltiu|sltu|sne|sra|srav|srl|srlv|sub|subu|sw|swl|swr|syscall|teq|tge|tgeu|tlbp|tlbr|tlbpr|tlbwi|tlbwr|tlt|tltu|tne|ulw|usw|xor|xori)\\b"
+        },
+        {
+          "name": "entity.name.function.mips",
+          "match": "\\b(\\w+):"
+        },
+        {
+          "name": "variable.parameter.mips",
+          "match": "(?:\\b(v[0-1]|a[0-3]|t[0-9]|s[0-8]|k[0-1]|gp|_gp|sp|ra|z0|ZERO|AT|HI|LO|PC|cop0 \\$\\d{1,2}|c0_[a-z]+)|(\\$\\d{1,2}))\\b"
+        },
+        {
+          "name": "constant.numeric.mips",
+          "match": "(?:\\b|(-))(0x[a-fA-F\\d]+|0b[01]+|\\d+)\\b"
+        },
+        {
+          "name": "storage.modifier.mips",
+          "match": "(?:\\.(text|rdata|data|bss|lit4|lit8|sdata|sbss|byte|half|word|float|double|ascii|asciiz|asciz|align|comm|lcomm|space|globl|global|extern|weakext|ent|end|aent|frame|mask|fmask|set|type))\\b"
+        },
+        {
+          "name": "storage.type.mips",
+          "match": "(@function)\\b"
+        },
+        {
+          "name": "keyword.operator.mips",
+          "match": "(%hi|%lo)\\b"
+        },
+        {
+          "name": "keyword.control.mips",
+          "match": "(#include)\\b"
+        },
+        {
+          "name": "variable.other.constant.mips",
+          "match": "\\b([A-Z0-9_]+)\\b"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.mips",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.mips",
+              "match": "\\\\."
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.other.lt-gt.mips",
+          "begin": "<",
+          "end": ">"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.mips"
+}

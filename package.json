@@ -1,0 +1,55 @@
+{
+  "name": "mips-assembly-syntaxer",
+  "displayName": "MIPS Assembly Syntaxer",
+  "description": "MIPS assembly syntax highlighting plugin with snippets",
+  "version": "0.1.0",
+  "publisher": "BlueDeviL",
+  "homepage": "https://github.com/blue-devil/vscodium-mips-assembly-syntaxer",
+  "icon": "assets/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/blue-devil/vscodium-mips-assembly-syntaxer"
+  },
+  "bugs": {
+    "url": "https://github.com/blue-devil/vscodium-mips-assembly-syntaxer/issues",
+    "email": "bluedevil.SCT@gmail.com"
+  },
+  "engines": {
+    "vscode": "^1.5.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "mips",
+        "aliases": [
+          "MIPS Assembly",
+          "mips"
+        ],
+        "extensions": [
+          ".s",
+          ".mips",
+          ".spim",
+          ".asm"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "mips",
+        "scopeName": "source.mips",
+        "path": "./syntaxes/mips.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "mips",
+        "path": "./snippets/snippets.json"
+      }
+    ]
+  }
+}
