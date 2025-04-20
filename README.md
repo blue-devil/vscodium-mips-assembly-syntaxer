@@ -27,11 +27,11 @@ Blue DeviL // SCT
 >
 > ---
 >
-> Symbolic silence within coded shadows
-> interlocked pipelines bleed slow
-> whispers gently, the machine...
+> Symbolic silence within coded shadows  
+> interlocked pipelines bleed slow  
+> whispers gently, the machine...  
 >
-> Blue DeviL // SCT
+> Blue DeviL // SCT  
 > 21.04.2025
 
 ## License
