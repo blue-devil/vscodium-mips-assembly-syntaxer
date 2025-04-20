@@ -328,6 +328,7 @@ dkms.conf
 #
 # VSCode gitignore start
 #
+.vscode
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
