@@ -12,6 +12,7 @@ GNU sytle syntax coloring. Also works in _vscode_.
 ## Todo
 
 * Make line comments italic
+* Make line comments non-colored
 * Finish development
 * o32, n32, n64?
 * Starter snippets
