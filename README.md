@@ -1,9 +1,10 @@
-# VSCodium MIPS Assembly Syntaxer
+# VSCodium MIPS32 (o32) Assembly Syntaxer
 
 ![banner](./assets/banner.png)
 
 **MIPS Assembly Syntaxer** is a **VSCodium Extension** which provides
-GNU sytle syntax coloring. Also works in _vscode_.
+GNU sytle syntax coloring. Also works in _vscode_. Specifically, this
+extension highlights MIPS32 (o32) architecture.
 
 ## Screenshots
 
@@ -11,10 +12,7 @@ GNU sytle syntax coloring. Also works in _vscode_.
 
 ## Todo
 
-* Make line comments italic
-* Make line comments non-colored
 * Finish development
-* o32, n32, n64?
 * Starter snippets
 * Add debugger support for linux (remote)
 * Add compiler support

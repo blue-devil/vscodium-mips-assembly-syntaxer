@@ -22,3 +22,8 @@ codium --install-extension ./package.vsix
 ## Publish on Marketplace
 
 Create an account.
+
+## Publish on Open VSX
+
+* Create an account Open VSX
+* Create an account on Eclipse Foundation

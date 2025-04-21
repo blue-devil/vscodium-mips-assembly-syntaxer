@@ -86,8 +86,8 @@ __start:
     /* execve("/bin/sh", NULL, NULL) */
     li      $a2, NULL
     la      $a1, argv
-    la      $a0, path
-    li      $v0, 4011
+    la      $a0, path       # pointer to /bin/sh
+    li      $v0, 4011       # execve syscall
     syscall
 
 __exit:

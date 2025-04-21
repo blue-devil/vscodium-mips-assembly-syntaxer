@@ -2,7 +2,7 @@
   "name": "mips-assembly-syntaxer",
   "displayName": "MIPS Assembly Syntaxer",
   "description": "MIPS assembly syntax highlighting plugin with snippets",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "publisher": "BlueDeviL",
   "homepage": "https://github.com/blue-devil/vscodium-mips-assembly-syntaxer",
   "icon": "assets/icon.png",
@@ -26,7 +26,7 @@
       {
         "id": "mips",
         "aliases": [
-          "MIPS Assembly",
+          "MIPS32 (o32) Assembly",
           "mips"
         ],
         "extensions": [

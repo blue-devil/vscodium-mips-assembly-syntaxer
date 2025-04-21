@@ -1,12 +1,15 @@
 {
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-  "name": "MIPS Assembly Syntaxer",
+  "name": "MIPS32 (o32) Assembly Syntaxer",
   "patterns": [
     {
       "include": "#keywords"
     },
     {
       "include": "#strings"
+    },
+    {
+      "include": "#comments"
     }
   ],
   "repository": {
@@ -35,7 +38,7 @@
         },
         {
           "name": "storage.modifier.mips",
-          "match": "(?:\\.(text|rdata|data|bss|lit4|lit8|sdata|sbss|byte|half|word|float|double|ascii|asciiz|asciz|align|comm|lcomm|space|globl|global|extern|weakext|ent|end|aent|frame|mask|fmask|set|type))\\b"
+          "match": "(?:\\.(equ|section|text|rdata|data|bss|lit4|lit8|sdata|sbss|byte|half|word|float|double|ascii|asciiz|asciz|align|comm|lcomm|space|globl|global|extern|weakext|ent|end|aent|frame|mask|fmask|set|type))\\b"
         },
         {
           "name": "storage.type.mips",
@@ -72,6 +75,14 @@
           "name": "string.quoted.other.lt-gt.mips",
           "begin": "<",
           "end": ">"
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "match": "([;@]|//|#).*$",
+          "name": "comment.mips"
         }
       ]
     }
